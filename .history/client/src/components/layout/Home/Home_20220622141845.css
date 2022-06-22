@@ -1,0 +1,12 @@
+@import '../../../assets/css/style.css';
+
+.home-page{
+    margin: 1rem 0;
+}
+
+.custom-link,
+.custom-link:hover{
+    display: inline-block;
+    color: var(--black);
+    cursor: pointer;
+}
