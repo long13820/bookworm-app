@@ -1,0 +1,27 @@
+<?php
+
+
+namespace App\Repositories\Book;
+
+use App\Models\Book;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
+
+class BookRepository{
+    public function OnSaleBooks(){
+        return Book::join('discount', 'discount.book_id', '=', 'book.id' )
+            -> join('author', 'author.id', '=', 'book.author_id')
+            ->selectRaw('book.id,
+            book.book_title,
+            book.book_price,
+            book.book_cover_photo,
+            author.author_name,
+            discount.discount_price,
+            book.book_price - discount.discount_price as sub_price')
+            ->orderBy('sub_price', 'desc')
+            ->limit(10)
+            ->get();
+
+    }
+}

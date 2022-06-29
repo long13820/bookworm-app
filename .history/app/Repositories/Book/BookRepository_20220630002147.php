@@ -1,0 +1,74 @@
+<?php
+
+
+namespace App\Repositories\Book;
+
+use App\Models\Book;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
+
+class BookRepository{
+
+    protected $books;
+
+    public function __construct(Book $books)
+    {
+        $this->books = $books;
+    }
+
+    //Danh sách 10 sách khuyến mãi nhiều nhất
+
+    public function getOnSaleBooks(){
+
+        $books = DB::table('books')->join('discounts','books.id','=','discounts.book_id')
+            ->join('authors', 'books.author_id','=','authors.id')
+            ->select(
+                'books.id',
+                'books.book_cover_photo',
+                'books.book_title',
+                'books.book_price',
+                'authors.author_name',
+                'discounts.discount_price',
+                DB::raw('books.book_price - discounts.discount_price as sub_price'),
+                DB::raw('CASE WHEN (discounts.discount_price isnull) THEN books.book_price ELSE discounts.discount_price end as final_price')
+            )
+            ->where(function($query){
+                $query->whereDate('discount_start_date','<=', now()->toDateString())
+                      ->whereDate('discount_end_date','>=', now()->toDateString());
+            })
+            ->orWhere(function($query){
+                $query->whereDate('discount_start_date','<=', now()-> toDateString())
+                      ->whereNull('discounts.discount_end_date');
+            })
+            ->orderBy('sub_price','desc')
+            ->take(10)
+            ->get();
+
+        return $books;
+
+    }
+
+     //Danh sách 8 cuốn Recommended
+    public function getRecommendedBooks(){
+        return  Book::join('authors', 'authors.id', '=', 'books.author_id')
+        ->select('books.id',
+            'books.book_title',
+            'books.book_price',
+            'books.book_cover_photo',
+            'authors.author_name')
+
+        ->selectRaw('(CASE WHEN EXISTS (select book_id from discounts where books.id=book_id)
+                          THEN (select discount_price from discount where book_id=book.id)
+                          ELSE book.book_price END) as final_price')
+        ->join('review', 'review.book_id', '=', 'book.id')
+        ->withAvg('review', 'rating_star')
+        ->distinct()
+        ->orderBy('review_avg_rating_star', 'desc')
+        ->orderBy('final_price', 'asc')
+        ->limit(8)
+        ->get();
+    }
+
+
+}
