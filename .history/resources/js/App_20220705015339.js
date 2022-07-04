@@ -34,7 +34,7 @@ function App() {
         {/* <Title title="About"/> */ }
         {/* {pathname === '/about' ? <Title title={objectPath[pathname]}/> : ''} */}
         <Routes>
-          <Route path='/' element={<Home/>}/>
+          <Route path='/sad' element={<Home/>}/>
           <Route path='/shop' element={<Shop/>} />
           {/* <Route path='/cart' element={<Cart/>} />
           <Route path='/shop/1' element={<Product/>} /> */}

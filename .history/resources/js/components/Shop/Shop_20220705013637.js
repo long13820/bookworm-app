@@ -10,7 +10,7 @@ import Book7 from '../../../assets/bookcover/book7.jpg';
 import Book8 from '../../../assets/bookcover/book8.jpg';
 import Book9 from '../../../assets/bookcover/book9.jpg';
 import Book10 from '../../../assets/bookcover/book10.jpg';
-import defaultBookCover from '../../../assets/bookcover/defaultBookCover.png';
+import defaultBookCover from '../../assets/bookcover/defaultBookCover.png';
 import Pagination from "react-js-pagination";
 import axios from "axios";
 import MyDropdown from "../Dropdown/MyDropdown";

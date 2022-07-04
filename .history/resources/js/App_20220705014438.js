@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import React, { useRef } from 'react';
+// import About from './components/About/About';
 // import Cart from './components/Cart/Cart';
 // import Home from './components/Home/Home';
 // import Product from './components/Product/Product';
@@ -35,7 +36,7 @@ function App() {
         {/* {pathname === '/about' ? <Title title={objectPath[pathname]}/> : ''} */}
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/shop' element={<Shop/>} />
+          {/* <Route path='/shop' element={<Shop/>} /> */}
           {/* <Route path='/cart' element={<Cart/>} />
           <Route path='/shop/1' element={<Product/>} /> */}
           <Route path='/about' element={<About/>} />
