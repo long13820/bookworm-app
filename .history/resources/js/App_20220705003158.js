@@ -11,7 +11,6 @@ import React, { useRef } from 'react';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import Home from './components/Home/Home';
 
 config.autoAddCss  = false;
 
@@ -32,11 +31,11 @@ function App() {
         <Header ref={headerRef}/>
 
         {/* <Title title="About"/> */ }
-        {pathname === '/about' ? <Title title={objectPath[pathname]}/> : ''}
+        {/* {pathname === '/about' ? <Title title={objectPath[pathname]}/> : ''} */}
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/shop' element={<Shop/>} />
-          {/* <Route path='/cart' element={<Cart/>} />
+          {/* <Route path='/shop' element={<Shop/>} />
+          <Route path='/cart' element={<Cart/>} />
           <Route path='/shop/1' element={<Product/>} />
           <Route path='/about' element={<About/>} /> */}
         </Routes>
