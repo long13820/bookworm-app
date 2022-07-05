@@ -14,8 +14,6 @@ import Shop from './components/Shop/Shop';
 import About from './components/About/About';
 import Cart from './components/Cart/Cart';
 import Product from './components/Product/Product';
-import Login from './components/Login/Login';
-import Register from './components/Register/Register';
 
 config.autoAddCss  = false;
 
@@ -41,9 +39,8 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/shop' element={<Shop/>} />
           <Route path='/cart' element={<Cart/>} />
-          <Route path='/shop/:id' element={<Product/>} />
+          <Route path='/shop/:' element={<Product/>} />
           <Route path='/about' element={<About/>} />
-          <Route path='/login' element={<Register/>}/>
         </Routes>
 
         <Footer/>

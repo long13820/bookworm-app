@@ -24,7 +24,7 @@ const Header = () => {
                         <a className="nav-link" href="/cart">Cart(0)</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/login">Sign in</a>
+                        <a className="nav-link" href="/lo">Sign in</a>
                     </li>
 
                 </ul>
