@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import React, { useRef } from 'react';
 
-
+// import Product from './components/Product/Product';
 // import Title from './components/Title/Title';
 
 import { config } from '@fortawesome/fontawesome-svg-core';

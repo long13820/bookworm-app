@@ -2,7 +2,8 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import React, { useRef } from 'react';
 
-
+// import Home from './components/Home/Home';
+// import Product from './components/Product/Product';
 // import Title from './components/Title/Title';
 
 import { config } from '@fortawesome/fontawesome-svg-core';
@@ -12,7 +13,6 @@ import Home from './components/Home/Home';
 import Shop from './components/Shop/Shop';
 import About from './components/About/About';
 import Cart from './components/Cart/Cart';
-import Product from './components/Product/Product';
 
 config.autoAddCss  = false;
 
@@ -38,7 +38,7 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/shop' element={<Shop/>} />
           <Route path='/cart' element={<Cart/>} />
-          <Route path='/shop/1' element={<Product/>} />
+          {/* <Route path='/shop/1' element={<Product/>} /> */}
           <Route path='/about' element={<About/>} />
         </Routes>
 

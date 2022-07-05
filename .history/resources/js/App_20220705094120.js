@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import React, { useRef } from 'react';
 
-
+// import Product from './components/Product/Product';
 // import Title from './components/Title/Title';
 
 import { config } from '@fortawesome/fontawesome-svg-core';
@@ -38,7 +38,7 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/shop' element={<Shop/>} />
           <Route path='/cart' element={<Cart/>} />
-          <Route path='/shop/1' element={<Product/>} />
+          <Route path='/shop/1' element={<Productuct/>} />
           <Route path='/about' element={<About/>} />
         </Routes>
 
