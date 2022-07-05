@@ -50,10 +50,6 @@ div .navbar-nav .nav-item:hover>a {
     margin-bottom: 8px;
 }
 
-.sticky-top .color-link{
-    color: inherit;
-}
-
 #accordion .card-body ul li.active,
 #accordion .card-body ul li:hover {
     background-color: var(--darkblue);

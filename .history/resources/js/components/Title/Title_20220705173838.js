@@ -10,4 +10,4 @@ return(
 );
 }
 
-export default Title;
+export default pageTitle;

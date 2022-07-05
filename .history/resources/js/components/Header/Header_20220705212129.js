@@ -126,7 +126,7 @@ export default class Header extends React.Component{
                 </ModalHeader>
                 {this.state.loginForm === true ? <Login/> : <Register/>}
             </Modal>
-            <ToastContainer/>
+            <ToastContainer
         </div>
     );
     }

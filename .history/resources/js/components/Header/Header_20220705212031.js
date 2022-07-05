@@ -7,7 +7,6 @@ import { faHome, faShop, faCircleInfo, faCartShopping } from "@fortawesome/free-
 import { Link, NavLink } from "react-router-dom";
 import Register from "../Register/Register";
 import Login from "../Login/Login";
-import { ToastContainer } from "react-toastify";
 
 export default class Header extends React.Component{
     constructor(props){
@@ -126,7 +125,7 @@ export default class Header extends React.Component{
                 </ModalHeader>
                 {this.state.loginForm === true ? <Login/> : <Register/>}
             </Modal>
-            <ToastContainer/>
+            <Toa
         </div>
     );
     }

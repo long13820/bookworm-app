@@ -3,6 +3,8 @@ import './App.css';
 import React, { useRef } from 'react';
 
 
+// import Title from './components/Title/Title';
+
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import Header from './components/Header/Header';

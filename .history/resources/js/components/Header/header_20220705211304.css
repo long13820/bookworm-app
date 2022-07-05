@@ -67,7 +67,7 @@ div .navbar-nav .nav-item:hover>a {
 }
 
 .border-right {
-    border-right: 2px solid var(--darkblue);
+    border-right: 2px solid inherit;
 }
 
 .activetab {

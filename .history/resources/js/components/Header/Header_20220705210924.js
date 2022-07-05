@@ -7,7 +7,6 @@ import { faHome, faShop, faCircleInfo, faCartShopping } from "@fortawesome/free-
 import { Link, NavLink } from "react-router-dom";
 import Register from "../Register/Register";
 import Login from "../Login/Login";
-import { ToastContainer } from "react-toastify";
 
 export default class Header extends React.Component{
     constructor(props){
@@ -54,7 +53,7 @@ export default class Header extends React.Component{
     return(
         <div className="sticky-top">
             <Navbar color="light" light expand="md" className="sticky-top px-4">
-                <Link to="/" className="font-22px color-link">
+                <Link to="/" className="font-22px color-">
                     BOOKWORM
                 </Link>
                 <NavbarToggler onClick={this.toggle}/>
@@ -113,7 +112,7 @@ export default class Header extends React.Component{
                     </Collapse>
                 </div>
             </Navbar>
-            <Modal isOpen={this.state.modal} >
+            <Modal isOpen={this.state.modal} toggle={this.handleModal}>
                 <ModalHeader toggle={this.handleModal}>
                     <div className="d-flex">
                         <div className="flex-grow-1 text-center pointer border-right" onClick={this.setForm}>
@@ -126,7 +125,6 @@ export default class Header extends React.Component{
                 </ModalHeader>
                 {this.state.loginForm === true ? <Login/> : <Register/>}
             </Modal>
-            <ToastContainer/>
         </div>
     );
     }

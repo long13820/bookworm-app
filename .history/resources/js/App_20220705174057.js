@@ -3,6 +3,8 @@ import './App.css';
 import React, { useRef } from 'react';
 
 
+// import Title from './components/Title/Title';
+
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import Header from './components/Header/Header';
@@ -35,7 +37,7 @@ function App() {
         <Header />
 
         {/* <Title title="About"/> */ }
-        {pathname === '/about' ? <Title title={objectPath[pathname]}/> : ''}
+        {pathname === '/about' ? <Tile title={objectPath[pathname]}/> : ''}
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/shop' element={<Shop/>} />

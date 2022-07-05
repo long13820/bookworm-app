@@ -34,6 +34,7 @@
         "@mui/material": "^5.8.6",
         "react-js-pagination": "^3.0.3",
         "react-router-dom": "^6.3.0",
+        "react-toastify": "^9.0.5",
         "reactstrap": "^9.1.1",
         "redux": "^4.2.0",
         "swiper": "^8.2.6"

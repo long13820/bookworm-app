@@ -9,7 +9,7 @@ ul li {
 }
 
 div .navbar-nav .nav-item div.login-btn {
-    color: var(--darkblue);
+    color: var(--);
 }
 
 div .navbar-nav .nav-item a {
@@ -48,10 +48,6 @@ div .navbar-nav .nav-item:hover>a {
 
 #accordion .card-body ul li:not(:last-child) {
     margin-bottom: 8px;
-}
-
-.sticky-top .color-link{
-    color: inherit;
 }
 
 #accordion .card-body ul li.active,

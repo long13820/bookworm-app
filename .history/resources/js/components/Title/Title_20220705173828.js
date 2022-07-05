@@ -1,6 +1,6 @@
-import "./title.css";
+import "./page-title.css";
 
-function Title(props){
+function pageTitle(props){
 return(
 <div className="container">
     <div className="title-page ">
@@ -10,4 +10,4 @@ return(
 );
 }
 
-export default Title;
+export default pageTitle;
