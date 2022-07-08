@@ -1,0 +1,24 @@
+import { ModalBody } from 'reactstrap';
+import './login.css'
+
+function Login(){
+    const [error, setError] = 
+
+    return (
+        <form>
+            <ModalBody>
+                <div className='mb-3'>
+                    <p className='mb-2'>Email</p>
+                    <input
+                        type='text'
+                        placeholder='Email'
+                        name='email'
+                        id='email'
+                        className={`form-control ${err}`}
+                    />
+                </div>
+            </ModalBody>
+        </form>
+    )
+}
+export default Login;
