@@ -134,7 +134,7 @@ export default class Product extends React.Component{
       componentDidMount() {
         this.getDetail();
       }
-
+      
 
     render(){
     return (

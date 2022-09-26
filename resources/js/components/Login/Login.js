@@ -79,7 +79,24 @@ function Login() {
         <div className="d-flex justify-content-end text-dark-blue">
           <span className="pointer">Forgot your password?</span>
         </div>
+        <div class="text-center mb-3">
+            <p>or sign up with:</p>
+            <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-facebook-f"></i>
+            </button>
 
+            <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-google"></i>
+            </button>
+
+            <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-twitter"></i>
+            </button>
+
+            <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-github"></i>
+            </button>
+        </div>
         {error != '' ? (
           <Alert color={error === 'Login successfully' ? 'success' : 'danger'} className="mt-3">
             {error}
